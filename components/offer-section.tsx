@@ -54,13 +54,12 @@ export function OfferSection() {
             <p className="mb-6 text-[0.88rem] font-medium text-foreground">
               Ou 19€ pour un seul pays (Belgique <span className="text-muted-foreground">ou</span> France).
             </p>
-            <a
-              href="#"
+            <button
               className="group flex w-full items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[0.95rem] font-bold text-primary-foreground transition-all hover:-translate-y-0.5 hover:bg-brand-strong"
             >
               Je prends le pack
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-            </a>
+            </button>
             <p className="mt-4 text-center text-[0.8rem] text-muted-foreground">
               Paiement unique · Accès immédiat
             </p>
