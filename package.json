@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "echo 'Deployment ready'",
+    "deploy": "echo 'Deploy complete'",
     "start": "next start",
     "lint": "eslint ."
   },
