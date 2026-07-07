@@ -6,6 +6,10 @@ __v0_jsx-dev-runtime.ts
 .v0-trash/
 .vercel/
 
+# Package manager lock files (keep only npm for Cloudflare)
+pnpm-lock.yaml
+yarn.lock
+
 # Environment variables
 .env*.local
 
