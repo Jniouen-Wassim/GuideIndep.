@@ -1,0 +1,18 @@
+# Stormkit configuration for automatic deployment
+app:
+  name: guideindep
+  framework: nextjs
+  buildCommand: npm run build
+  outputDirectory: out
+  environment: production
+
+# GitHub integration settings
+github:
+  autoDeploy: true
+  branches:
+    - main
+  pullRequest: false
+
+# Environment variables (if needed)
+env:
+  NODE_ENV: production
