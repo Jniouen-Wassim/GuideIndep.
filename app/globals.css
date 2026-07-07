@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+/* Le Dossier theme v2 */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand + dark surface tokens */
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-ink: var(--ink);
+  --color-ink-elevated: var(--ink-elevated);
+  --color-ink-card: var(--ink-card);
+  --color-ink-border: var(--ink-border);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
+  --color-success: var(--success);
+
+  --radius-sm: calc(var(--radius) * 0.55);
+  --radius-md: calc(var(--radius) * 0.72);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.35);
+  --radius-2xl: calc(var(--radius) * 1.7);
+  --radius-full: 999px;
+}
+
+:root {
+  color-scheme: light;
+  --radius: 1.125rem;
+
+  /* Neutrals — warm off-white + deep ink */
+  --background: oklch(0.975 0.004 75);
+  --foreground: oklch(0.21 0.012 275);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.012 275);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.012 275);
+
+  /* Brand — dynamic emerald green (≈ emerald-600) */
+  --primary: oklch(0.6 0.132 163);
+  --primary-foreground: oklch(0.99 0 0);
+  --brand: oklch(0.6 0.132 163);
+  --brand-strong: oklch(0.52 0.118 164);
+  --brand-soft: oklch(0.955 0.036 165);
+
+  --secondary: oklch(0.965 0.004 75);
+  --secondary-foreground: oklch(0.21 0.012 275);
+  --muted: oklch(0.965 0.004 75);
+  --muted-foreground: oklch(0.53 0.012 270);
+  --accent: oklch(0.955 0.036 165);
+  --accent-foreground: oklch(0.44 0.108 164);
+  --destructive: oklch(0.55 0.213 22);
+
+  --border: oklch(0.9 0.006 270);
+  --input: oklch(0.9 0.006 270);
+  --ring: oklch(0.6 0.132 163);
+
+  --success: oklch(0.6 0.132 163);
+
+  /* Dark surfaces used in Hero / Programme / CTA */
+  --ink: oklch(0.17 0.009 275);
+  --ink-elevated: oklch(0.21 0.01 275);
+  --ink-card: oklch(0.24 0.01 275);
+  --ink-border: oklch(1 0 0 / 10%);
+  --ink-foreground: oklch(0.99 0 0);
+  --ink-muted: oklch(0.72 0.012 275);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    background: var(--brand);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+}
